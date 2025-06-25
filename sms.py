@@ -10,9 +10,9 @@ MSG_COST = 0.04                  # Cost per message
 TIMEOUT_SECONDS = 2              # Sleep time after each text
 
 # Twilio: Find these values at https://twilio.com/user/account
-account_sid = "AC5396757039ec0ea204b3fa4ae03155fa"   # Ensure you remove the angle brackets! < >
-auth_token = "45604b22a98d76f2d234ff54ebc611e9"
-from_num = "+17542033162"                  # 'From' number in Twilio
+account_sid = "API key"   # Ensure you remove the angle brackets! < >
+auth_token = "Add auth token "
+from_num = "add number"                  # 'From' number in Twilio
 
 # Now put your SMS in a file called message.txt, and it will be read from there.
 with open(MESSAGE_FILE, 'r') as content_file:
@@ -55,9 +55,3 @@ if confirm[0].lower() == 'y':
         time.sleep(TIMEOUT_SECONDS)
 
 print("Exiting!")
-#
- #* sms_sender/
-#├── message.txt
-#├── participants.csv
- # ── SmsSender.py
-#*/
