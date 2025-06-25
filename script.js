@@ -32,10 +32,10 @@ document.getElementById('send-sms').addEventListener('click', function () {
 
 
 const twilio = require('twilio');
-const client = new twilio('ACdcc0164ed6ab98544ac2c41b2faad93e', '377b088ba34151fd6422e3fa8ec9bed4');
+const client = new twilio('Key', 'Key');
 
 client.messages.create({
   body: 'Your message here',
-  to: '+917419880744',
-  from: '+919651959928'
+  to: '+91XXXXXXXXXX',   // sender number
+  from: '+91XXXXXXXXX'   //  recver number
 }).then((message) => console.log(message.sid));
