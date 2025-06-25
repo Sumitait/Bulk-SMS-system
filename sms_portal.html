@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulk SMS Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <div id="login-form">
+      <h2>Login</h2>
+      <form id="login" action="/login" method="POST">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <!-- SMS Dashboard -->
+    <div id="sms-dashboard" style="display:none;">
+      <h2>Bulk SMS Sender</h2>
+      <form id="sms-form">
+        <textarea id="recipients" placeholder="Enter recipient numbers (comma-separated)" rows="4"></textarea>
+        <textarea id="message" placeholder="Enter your message" rows="4"></textarea>
+        <input type="file" id="upload-file" />
+        <button type="button" id="send-sms">Send SMS</button>
+      </form>
+      <div id="sms-status"></div>
+
+      <h2>Received Messages</h2>
+      <div id="received-messages">
+        <!-- Received SMS will be displayed here -->
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
